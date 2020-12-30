@@ -125,7 +125,7 @@ def main(data_dir):
                 gt_uv_map = np.load("./test_data/test_obama.npy")
                 origin, gt_uv_map = test_data_preprocess(origin), test_data_preprocess(gt_uv_map)
 
-                origin, gt_uv_map = transform_img(origin), transform_img(gt_uv_map)
+                # origin, gt_uv_map = transform_img(origin), transform_img(gt_uv_map)
 
                 origin_in = origin.unsqueeze_(0).cuda()
                 pred_uv_map = model(origin_in).detach().cpu()

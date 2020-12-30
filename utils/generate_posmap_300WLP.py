@@ -106,11 +106,11 @@ def generate_batch_sample(input_dir, save_folder='./300WLP'):
 
     # load uv coords
     global uv_coords
-    uv_coords = face3d.morphable_model.load.load_uv_coords('BFM/BFM_UV.mat')  #
+    uv_coords = face3d.morphable_model.load.load_uv_coords('BFM_UV.mat')  #
     uv_coords = process_uv(uv_coords, uv_h, uv_w)
 
     # load bfm
-    bfm = MorphabelModel('BFM/BFM.mat')
+    bfm = MorphabelModel('BFM.mat')
 
     # Batch generating uv_map Dataset
     """
